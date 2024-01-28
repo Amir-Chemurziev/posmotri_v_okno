@@ -89,16 +89,18 @@ ol {
 }
 .search-form__submit-button {
   width: 194px;
-  height: 34px;
-}
-.search-form__submit-button:active {
-  background-color: #545050;
+  min-height: 34px;
 }
 .search-form__submit-button:hover {
   text-decoration: underline 1px #FFF;
 }
+.search-form__submit-button:active {
+  background-color: #545050;
+  text-decoration: none;
+}
 .search-form__submit-button:focus {
  outline: 1px solid #fff;
+ outline-offset: 1px;
 }
 .search-form__checkbox {
   margin: 0;
@@ -126,12 +128,14 @@ ol {
   border-bottom: 1px solid #FFF;
   border-left: none;
   padding: 2px 0;
+  margin-top: 5px;
   color: currentColor;
   font-family: 'Fira Sans Condensed', sans-serif;;
   font-weight: 400;
   font-size: 18px;
   background-color: transparent;
   inline-size: 225px;
+  border: 1px solid transparent;
 }
 .search-form__textfield::placeholder {
   color: rgba(255, 255, 255, 0.7);
@@ -148,7 +152,7 @@ ol {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-  margin-bottom: 5px;
+  margin-top: 5px;
 }
 .search-form__pseudo-checkbox {
   display: block;
@@ -167,7 +171,7 @@ ol {
   block-size: 15px;
   margin: 1px 0 0 1px;
   content: '';
-}
+} 
 /*блок с видео */
 .title {
   font-size: 75px;
@@ -187,7 +191,7 @@ ol {
   height: 386px;
   margin-bottom: 16px;
 }
-video {
+.result__video {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -199,17 +203,24 @@ video {
 }
 .content__video-card {
   display: flex;
-  height: 107px;
+  min-height: 107px;
   flex-direction: row;
   justify-content: space-between;
   margin-bottom: 30px;
 }
-.content__video-card:active { 
-  background-color: #545050; 
-} 
+.content__card-link_current .content__video-card {
+  background-color: #545050;
+}
 .content__video-card:focus {
   border: 1px solid #fff;
 }
+.content__video-card:hover {
+  text-decoration: underline 1px #FFF;
+}
+.content__video-card:active { 
+  background-color: #545050; 
+  text-decoration: none;
+} 
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
@@ -225,12 +236,11 @@ video {
 }
 /*Блок с картами */
 .content__list {
+  width: 399px;
   position: relative;
   overflow-y: scroll;
   block-size: 298px;
-}
-.content__list::-webkit-scrollbar {
-  display: none;
+  overflow-x: hidden;
 }
 .content__card-link {
   text-decoration: none;
@@ -238,20 +248,19 @@ video {
 .content__card-link:active {
   background-color: #545050;
 }
-.content__card-link:hover {
-  text-decoration: underline 1px #FFF;
-}
 .content__card-link:focus {
   outline: none;
 }
 .content__video-card-description {
   width: 200px;
   font-size: 18px;
+  margin-top: 5px;
   color: #FFFFFF;
   line-height: 16px;
   font-family: 'Fira Sans Condensed', sans-serif;
 }
 .content__video-card-title {
+  line-height: 30px;
   font-size: 30px;
   font-weight: 700;
   text-overflow: ellipsis;
@@ -261,5 +270,5 @@ video {
 }
 .more-button {
   width: 399px;
-  height: 34px;
+  min-height: 34px;
 }
