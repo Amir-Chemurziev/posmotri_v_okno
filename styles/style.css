@@ -157,7 +157,6 @@ ol {
 .search-form__checkbox-list {
   display: flex;
   gap: 15px;
-  margin-top: 5px;
 }
 .search-form__pseudo-checkbox {
   display: block;
@@ -232,7 +231,6 @@ ol {
 }
 .content__video-card-description-container {
   width: 200px;
-  height: 103px;
   margin: auto;
   white-space: normal;
 }
@@ -240,7 +238,7 @@ ol {
 .content__list {
   width: 399px;
   position: relative;
-  overflow-y: scroll;
+  overflow-y: auto;
   block-size: 298px;
   overflow-x: hidden;
 }
